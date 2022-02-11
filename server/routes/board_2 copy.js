@@ -39,12 +39,11 @@ const router = express.Router();
 router.post('/', (req, res, next) => { 
   var lon_arr = [];
   var lat_arr = [];
-  var busi_arr = [];
     console.log("boards2로 요청이들어옴");
     // 바로아래서 Return한다음 res가 처리되도록한다.
     console.log(req);
-      
-     return db.collection('boards').find({"sheet_name" : req.body.mydata}).toArray(function(err,docs) {
+
+     db.collection('boards').find({"sheet_name" : req.body.mydata}).toArray(function(err,docs) {
       if (err) throw err;
           console.log(err);
       for (var i = 0; i < docs.length; i++) {
@@ -54,20 +53,13 @@ router.post('/', (req, res, next) => {
       console.log("여기서 전달을못함?");
       console.log(lon_arr);
 
-      db.collection('boards').distinct("business_name",{"sheet_name": req.body.mydata}, function(err,docs) {
-        if (err) throw err;
-            console.log(err);
-        console.log("distict출력");
-        console.log(lon_arr);
-        console.log(docs);
-      })
-  
-      res.json({"lon_arr":lon_arr, "lat_arr":lat_arr, "busi_arr": busi_arr})  // 여기서 그냥 docs전체를 반환해버린다면.?????
-      res.end();
-
       // res.json({"lon_arr":lon_arr, "lat_arr":lat_arr})  // 여기서 그냥 docs전체를 반환해버린다면.?????
     })
 
+    
+    res.end();
+
+    return
   });
 
   

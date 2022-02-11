@@ -25,17 +25,27 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Map from './Map'; //context.Provider를 가져옴
+import { Provider } from "react-redux";
+import rootReducer from './modules';
+import { createStore, applyMiddleware, compose } from "redux";
 
+const store = createStore(rootReducer); // 스토어를 만듭니다.
+console.log("스토어상태를 확인해봅시다.");
+console.log(store.getState()); // 스토어의 상태를 확인해봅시다.
 
 ReactDOM.render(
+
   <React.StrictMode>
     {/* //provider에 저장된 객체를 사용하기 위해  APP을 감쌌다. */}
+    <Provider store={store}>
     <Map>
     <App />
     </Map>
+    </Provider>
     
   </React.StrictMode>,
   document.getElementById('root')
+
 );
 reportWebVitals();
 

@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const { MONGO_ID, MONGO_PASSWORD, NODE_ENV } = process.env;
-const MONGO_URL = `mongodb://${MONGO_ID}:${MONGO_PASSWORD}@localhost:27017/admin`; //MongoDB 서버 주소
+const MONGO_URL = `mongodb://${MONGO_ID}:${MONGO_PASSWORD}@192.168.0.8:17017/admin`; //MongoDB 서버 주소
 
 module.exports = () => {
   const connect = () => {

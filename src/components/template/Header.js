@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <div>
       <Navbar color="primary" light expand="md">
-        <NavbarBrand href="/">연안 관리 연구소 DB 시스템</NavbarBrand>
+        <NavbarBrand href="/">연안 관리 기술 연구소 DB 시스템</NavbarBrand>
         <Nav className="mr-auto" navbar>
           <NavItem>
             <NavLink href="/components/">Components</NavLink>

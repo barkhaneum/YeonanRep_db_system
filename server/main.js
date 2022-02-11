@@ -4,6 +4,8 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var api = require('./routes/index');
 
+// 이쪽파일에서 메인 API를 만들어서 API뒤에 조회할데이터를 붙여서 사용하도록한다.
+
 
 var cors = require('cors'); 
 // If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
@@ -16,8 +18,10 @@ db.once('open', function(){
   console.log('connected mongodb server!');
 });
  
-mongoose.connect('mongodb://localhost/test'); //MongoDB DB경로
+mongoose.connect('mongodb://192.168.0.8/test'); //MongoDB DB경로
+// let url = "mongodb://username:password@localhost:27017/";
  
+// 여기서 포트 번호를 변경함
 const port = 3002;
  
 //권한 사용하기

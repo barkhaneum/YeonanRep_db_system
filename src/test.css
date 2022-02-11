@@ -1,0 +1,118 @@
+/* contents를 담는 Container */
+.ol-popup-custom { 
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+    pointer-events: none;
+    position: absolute;
+    /* background-color: white; */
+    background-color: rgba(37, 40, 49, 0.5); /* 백그라운드 컬러 자식영향 x */
+    /* box-shadow: 0 0 5px #373b4c; */  /* 박스에 show값주기 */
+    /* filter: drop-shadow(3px 3px 7px rgba(150, 97, 97, 0.6)); */  /* shadow값 뒤로빼기 */
+    border: 0px solid black;
+    /* border-radius: 10px; */   /* 모서리 둥글게 */
+    width: 680px;
+    left: -160px; /* 위치를 조정, -width의 절반값 */
+    height: auto;
+    bottom: 0px; /* 위치를 조정, -height의 절반값 */
+    /* box-sizing: border-box; */
+    overflow: hidden;
+    /* opacity: 0.5; */
+    /* background : url("./image/contents_marker.png"); */
+    /* object-fit: cover; */
+    background-size: contain;
+    /* background-image: url("./image/contents_marker.png"); */
+}
+.popup-content {
+   position: relative;
+   /* animation-duration: 1s;
+   animation-name: slidein;
+   animation-direction: alternate;
+   animation-iteration-count: infinite; */
+   box-sizing: border-box;
+   line-height: 100%;
+   width: 33%;
+}
+
+.popup-content_2 {
+    position: relative;
+    /* animation-duration: 1s;
+    animation-name: slidein;
+    animation-direction: alternate;
+    animation-iteration-count: infinite; */
+    box-sizing: border-box;
+    line-height: 100%;
+    width: 33%;
+ }
+
+ .popup-content_3 {
+    position: relative;
+    /* animation-duration: 1s;
+    animation-name: slidein;
+    animation-direction: alternate;
+    animation-iteration-count: infinite; */
+    box-sizing: border-box;
+    line-height: 100%;
+    width: 33%;
+ }
+
+
+.popup-content > span {
+    display: inline-block;
+    line-height: 100%;
+    width: 100%;
+    font-size: 13px;
+    color: azure;
+    font-weight: lighter;
+    font-size : 15px;
+    box-sizing: border-box;
+}
+
+.popup-content-2 > span {
+    display: inline-block;
+    line-height: 100%;
+    width: 100%;
+    font-size: 13px;
+    color: azure;
+    font-weight: lighter;
+    font-size : 15px;
+    box-sizing: border-box;
+}
+
+.popup-content-3 > span {
+    display: inline-block;
+    line-height: 100%;
+    width: 100%;
+    font-size: 13px;
+    color: azure;
+    font-weight: lighter;
+    font-size : 15px;
+    box-sizing: border-box;
+}
+
+.popup-content > span > div{
+    padding : 1.0px;
+    font-size : 11px;
+    font-weight: bolder;
+}
+
+.popup-content-2 > span > div{
+    padding : 1.0px;
+    font-size : 11px;
+    font-weight: bolder;
+}
+
+.popup-content-3 > span > div{
+    padding : 1.0px;
+    font-size : 11px;
+    font-weight: bolder;
+}
+
+@keyframes slidein {
+    from {
+        left: 90px;
+    }
+    to {
+        left: 0px;
+    }
+}

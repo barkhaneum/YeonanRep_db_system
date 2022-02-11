@@ -1,5 +1,5 @@
 //Server와 클라이언트간에 통신할때 상태값 처리해주는부분
-// localhost:3000/api/board 로 접속했을때 처리되는부분
+// 192.168.0.8:3000/api/board 로 접속했을때 처리되는부분
 
 var express = require('express');
 var Board = require('../models/board'); //board에서는 MongoDB모델을 불러온다.
